@@ -4,12 +4,12 @@ on:
    pull_request:
     types: [synchronize, opened, reopened]
     branches:
-      - "develop"
+      - "main"
       - "release-[0-9]+.[0-9]+"
   push:
     branches:
-      - "develop"  
-	  - "release-[0-9]+.[0-9]+"
+      - "main"  
+      - "release-[0-9]+.[0-9]+"
 
 jobs:
   check_jira_id:
