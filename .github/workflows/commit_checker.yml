@@ -23,7 +23,7 @@ jobs:
         run: |
           commit_message=$(git log --format=%s -n 1 ${{ github.sha }})
           echo $commit_message
-          jira_pattern="JIRA-""
+          jira_pattern="JIRA-"
 
            if [[ ! $commit_message =~ $jira_pattern ]]; then
              echo "Error: Commit message must contain 'JIRA-'."
