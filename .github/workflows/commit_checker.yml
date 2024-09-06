@@ -26,7 +26,7 @@ jobs:
           jira_pattern="JIRA-"
 
            if [[ ! $commit_message =~ $jira_pattern ]]; then
-             echo "Error: Commit message must contain 'JIRA-'."
+             echo "Error: Commit message must have 'JIRA-'."
              exit 1
            fi
 
