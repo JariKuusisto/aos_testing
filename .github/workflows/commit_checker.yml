@@ -21,7 +21,8 @@ jobs:
 
       - name: Check JIRA ID
         run: |
-          commit_message=$(git log --format=%B -n 1 ${{ github.sha }})
+          commit_message=$(git log --format=%s -n 1 ${{ github.sha }})
+          echo $commit_message
           jira_pattern="\\bJIRA-\\d+\\b"
 
           if [[ ! $commit_message =~ $jira_pattern ]]; then
