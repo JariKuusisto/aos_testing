@@ -25,6 +25,6 @@ jobs:
           jira_pattern="\bJIRA-\d+\b"
 
           if [[ ! $commit_message =~ $jira_pattern ]]; then
-            echo "Error: Commit message must contain a valid JIRA ticket ID."
+            echo "Error: Commit message must have a valid JIRA ticket ID."
             exit 1
           fi
